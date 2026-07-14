@@ -3,8 +3,11 @@
    ========================================================================== */
 
 .container {
-    width: min(1280px, calc(100% - 64px));
+
+    width: min(100% - 64px, var(--container-width));
+
     margin-inline: auto;
+
 }
 
 /* ==========================================================================
@@ -12,48 +15,100 @@
    ========================================================================== */
 
 section {
-    padding: 120px 0;
+
+    position: relative;
+
+    padding: var(--section-spacing) 0;
+
 }
 
 /* ==========================================================================
-   FLEX UTILITIES
-   ========================================================================== */
-
-.flex {
-    display: flex;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ==========================================================================
-   GRID
+   GRID HELPERS
    ========================================================================== */
 
 .grid {
+
     display: grid;
+
+}
+
+.grid-2 {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 64px;
+
+}
+
+.grid-3 {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 40px;
+
+}
+
+/* ==========================================================================
+   FLEX HELPERS
+   ========================================================================== */
+
+.flex {
+
+    display: flex;
+
+}
+
+.flex-center {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.flex-between {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
 }
 
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
-    .container {
-        width: calc(100% - 32px);
+    .grid-2,
+    .grid-3 {
+
+        grid-template-columns: 1fr;
+
     }
 
+    .container {
+
+        width: min(100% - 40px, var(--container-width));
+
+    }
+
+}
+
+@media (max-width: 640px) {
+
     section {
-        padding: 80px 0;
+
+        padding: 96px 0;
+
     }
 
 }

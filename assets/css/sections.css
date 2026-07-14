@@ -1,0 +1,328 @@
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-top: 140px;
+
+    overflow: hidden;
+
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+    height: 900px;
+
+    left: -320px;
+    top: -280px;
+
+    background:
+            radial-gradient(circle,
+            rgba(95,168,255,.08),
+            transparent 70%);
+
+    pointer-events: none;
+
+}
+
+.hero-container {
+
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    align-items: center;
+
+    gap: 90px;
+
+}
+
+/* ==========================================================================
+   LEFT CONTENT
+   ========================================================================== */
+
+.hero-content {
+
+    max-width: 700px;
+
+}
+
+.hero-eyebrow {
+
+    color: var(--color-primary);
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: .85rem;
+
+    margin-bottom: 28px;
+
+    font-weight: var(--font-semibold);
+
+}
+
+.hero-title {
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    line-height: .92;
+
+    margin-bottom: 36px;
+
+    letter-spacing: -3px;
+
+}
+
+.hero-title span {
+
+    color: var(--color-primary);
+
+}
+
+.hero-description {
+
+    font-size: 1.35rem;
+
+    line-height: 1.7;
+
+    color: var(--color-text-muted);
+
+    margin-bottom: 50px;
+
+}
+
+.hero-actions {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 42px;
+
+}
+
+/* ==========================================================================
+   AVAILABILITY
+   ========================================================================== */
+
+.hero-availability {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px 24px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 999px;
+
+}
+
+.availability-icon {
+
+    font-size: 1.4rem;
+
+}
+
+.availability-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.availability-text strong {
+
+    font-size: .95rem;
+
+}
+
+.availability-text span {
+
+    color: var(--color-text-muted);
+
+    font-size: .85rem;
+
+}
+
+/* ==========================================================================
+   SHOWCASE
+   ========================================================================== */
+
+.hero-showcase {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.showcase-card {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    height: 760px;
+
+    border-radius: 30px;
+
+    border: 1px solid var(--color-border);
+
+    background: linear-gradient(
+            180deg,
+            var(--color-surface),
+            var(--color-surface-light)
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+.showcase-label {
+
+    color: var(--color-primary);
+
+    letter-spacing: 3px;
+
+    font-size: .8rem;
+
+    margin-bottom: 20px;
+
+}
+
+.showcase-card h2 {
+
+    font-size: 2.4rem;
+
+    margin-bottom: 16px;
+
+}
+
+.showcase-card p {
+
+    margin-bottom: 50px;
+
+}
+
+.showcase-placeholder {
+
+    color: var(--color-text-muted);
+
+}
+
+.showcase-footer {
+
+    margin-top: auto;
+
+    color: var(--color-primary);
+
+}
+
+/* ==========================================================================
+   SCROLL
+   ========================================================================== */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--color-text-muted);
+
+    animation: float 2.5s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translate(-50%,0);
+
+    }
+
+    50% {
+
+        transform: translate(-50%,8px);
+
+    }
+
+    100% {
+
+        transform: translate(-50%,0);
+
+    }
+
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 992px) {
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero {
+
+        padding-top: 160px;
+
+    }
+
+    .showcase-card {
+
+        height: 500px;
+
+    }
+
+}

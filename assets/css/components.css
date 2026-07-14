@@ -1,132 +1,588 @@
-/* ==========================================================================
+/* ===========================================================
    HEADER
-   ========================================================================== */
+=========================================================== */
 
-.site-header {
+.site-header{
 
-    position: sticky;
-    top: 0;
+    position:fixed;
 
-    z-index: 1000;
+    top:0;
+    left:0;
+    right:0;
 
-    padding: 24px 0;
+    z-index:1000;
 
-}
+    background:rgba(10,13,20,.82);
 
-/* ==========================================================================
-   NAVBAR
-   ========================================================================== */
+    backdrop-filter:blur(22px);
 
-.navbar {
+    -webkit-backdrop-filter:blur(22px);
 
-    display: flex;
+    border-bottom:1px solid rgba(255,255,255,.05);
 
-    justify-content: space-between;
-
-    align-items: center;
-
-}
-
-/* ==========================================================================
-   LOGO
-   ========================================================================== */
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 16px;
+    transition:
+            background .35s ease,
+            border-color .35s ease,
+            box-shadow .35s ease;
 
 }
 
-.logo-mark {
+.site-header::before{
 
-    font-size: 2rem;
+    content:"";
 
-    font-weight: 800;
+    position:absolute;
 
-    color: var(--color-primary);
+    inset:0;
 
-}
+    pointer-events:none;
 
-.logo-text {
-
-    display: flex;
-
-    flex-direction: column;
-
-    line-height: 1;
-
-}
-
-.logo-text span:first-child {
-
-    font-size: .9rem;
-
-    font-weight: 700;
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(255,255,255,.03),
+                    rgba(255,255,255,0)
+            );
 
 }
 
-.logo-text span:last-child {
+.header-container{
 
-    font-size: .9rem;
+    width:min(1180px,92%);
 
-    font-weight: 700;
+    margin:auto;
 
-}
+    height:78px;
 
-/* ==========================================================================
-   NAV LINKS
-   ========================================================================== */
+    display:flex;
 
-.nav-links {
+    align-items:center;
 
-    list-style: none;
+    justify-content:space-between;
 
-    display: flex;
+    position:relative;
 
-    gap: 40px;
+    z-index:2;
 
 }
 
-.nav-links a {
+/* ===========================================================
+   BLUE GLOW
+=========================================================== */
 
-    color: var(--color-text-muted);
+.header-glow{
 
-    font-size: .95rem;
+    position:absolute;
 
-    font-weight: 500;
+    left:0;
 
-}
+    right:0;
 
-.nav-links a:hover {
+    bottom:-1px;
 
-    color: var(--color-text);
+    width:100%;
 
-}
+    height:1px;
 
-/* ==========================================================================
-   RESUME BUTTON
-   ========================================================================== */
+    background:#4d90ff;
 
-.resume-button {
+    box-shadow:
 
-    border: 1px solid var(--color-border);
+            0 0 16px rgba(77,144,255,.75),
 
-    border-radius: var(--radius-md);
+            0 0 32px rgba(77,144,255,.45),
 
-    padding: 12px 20px;
-
-    transition: .25s ease;
+            0 0 60px rgba(77,144,255,.22);
 
 }
 
-.resume-button:hover {
+/* ===========================================================
+   BRAND
+=========================================================== */
 
-    border-color: var(--color-primary);
+.brand{
 
-    color: var(--color-primary);
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+}
+
+.brand-badge{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1rem;
+
+    font-weight:800;
+
+    letter-spacing:.06em;
+
+    color:#ffffff;
+
+    background:
+
+            linear-gradient(
+                    135deg,
+                    #5ca9ff,
+                    #2b6dff
+            );
+
+    box-shadow:
+
+            0 0 18px rgba(72,130,255,.35),
+
+            inset 0 1px 1px rgba(255,255,255,.25);
+
+    transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+
+}
+
+.brand:hover .brand-badge{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+            0 0 28px rgba(77,144,255,.65),
+
+            0 10px 30px rgba(31,80,200,.35);
+
+}
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.brand-name{
+
+    font-size:1.08rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    letter-spacing:.02em;
+
+}
+
+.brand-role{
+
+    margin-top:2px;
+
+    font-size:.74rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.55);
+
+}
+
+/* ===========================================================
+   NAVIGATION
+=========================================================== */
+
+.desktop-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.desktop-nav a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:rgba(255,255,255,.72);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:
+
+            color .3s ease,
+
+            transform .3s ease;
+
+}
+
+.desktop-nav a:hover{
+
+    color:#ffffff;
+
+    transform:translateY(-1px);
+
+}
+
+.desktop-nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-10px;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:2px;
+
+    border-radius:50px;
+
+    background:#4d90ff;
+
+    transition:width .3s ease;
+
+    box-shadow:
+
+            0 0 10px rgba(77,144,255,.9);
+
+}
+
+.desktop-nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================================================
+   RESUME
+=========================================================== */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.resume-link{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(77,144,255,.45);
+
+    background:rgba(77,144,255,.08);
+
+    transition:
+
+            transform .35s ease,
+
+            border-color .35s ease,
+
+            background .35s ease,
+
+            box-shadow .35s ease;
+
+}
+
+.resume-link:hover{
+
+    transform:translateY(-2px);
+
+    background:rgba(77,144,255,.16);
+
+    border-color:#4d90ff;
+
+    box-shadow:
+
+            0 0 18px rgba(77,144,255,.35),
+
+            0 8px 22px rgba(0,0,0,.28);
+
+}
+
+/* ===========================================================
+   HEADER HOVER
+=========================================================== */
+
+.site-header:hover{
+
+    background:rgba(10,14,22,.88);
+
+    border-bottom:1px solid rgba(77,144,255,.18);
+
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width:1024px){
+
+    .desktop-nav{
+
+        gap:28px;
+
+    }
+
+}
+
+@media (max-width:860px){
+
+    .desktop-nav{
+
+        display:none;
+
+    }
+
+    .brand-role{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .header-container{
+
+        height:72px;
+
+    }
+
+    .brand-badge{
+
+        width:44px;
+
+        height:44px;
+
+        border-radius:14px;
+
+        font-size:.9rem;
+
+    }
+
+    .brand-name{
+
+        font-size:1rem;
+
+    }
+
+    .resume-link{
+
+        padding:10px 18px;
+
+        font-size:.9rem;
+
+    }
+
+}
+
+@media (max-width:420px){
+
+    .brand-text{
+
+        display:none;
+
+    }
+
+}
+/* ===========================================================
+   BUTTONS
+=========================================================== */
+.btn-primary,
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.5rem;
+
+    padding:16px 30px;
+
+    border-radius:999px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:
+            transform .3s ease,
+            background .3s ease,
+            border-color .3s ease,
+            color .3s ease,
+            box-shadow .3s ease;
+
+}
+.btn-primary{
+
+    color:#ffffff;
+
+    background:linear-gradient(
+            135deg,
+            #5EA8FF,
+            #2B6DFF
+    );
+
+    border:none;
+
+    box-shadow:
+            0 8px 30px rgba(45,110,255,.28);
+
+}
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+            0 16px 40px rgba(45,110,255,.45);
+
+}
+.btn-secondary{
+
+    color:#ffffff;
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.14);
+
+}
+.btn-secondary:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#5EA8FF;
+
+    background:rgba(94,168,255,.08);
+
+}
+/* ===========================================================
+   GLASS CARD
+=========================================================== */
+.glass-card{
+
+    background:rgba(19,24,34,.72);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    transition:
+            transform .35s ease,
+            border-color .35s ease,
+            box-shadow .35s ease;
+
+}
+.glass-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(94,168,255,.25);
+
+    box-shadow:
+            0 30px 70px rgba(0,0,0,.30);
+
+}
+/* ===========================================================
+   TECHNOLOGY CHIP
+=========================================================== */
+.tech-chip{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#C8D4E7;
+
+    font-size:.82rem;
+
+    font-weight:500;
+
+    transition:
+            background .25s ease,
+            border-color .25s ease,
+            transform .25s ease;
+
+}
+.tech-chip:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#5EA8FF;
+
+    background:rgba(94,168,255,.08);
+
+}
+/* ===========================================================
+   SECTION LABEL
+=========================================================== */
+.section-label{
+
+    display:inline-block;
+
+    color:#5EA8FF;
+
+    text-transform:uppercase;
+
+    letter-spacing:.28em;
+
+    font-size:.82rem;
+
+    font-weight:600;
 
 }
