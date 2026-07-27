@@ -431,3 +431,42 @@
 
     }
 }
+/* ===========================================================
+   HERO - MOBILE (≤768px)
+=========================================================== */
+
+@media (max-width:768px){
+
+    .hero-container{
+
+        width:100%;
+
+        padding:0 24px;
+
+        box-sizing:border-box;
+
+    }
+
+    .hero-title{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero-description{
+
+        max-width:100%;
+
+        font-size:1.2rem;
+
+    }
+
+    .hero-stats{
+
+        grid-template-columns:1fr;
+
+        max-width:320px;
+
+    }
+
+}
