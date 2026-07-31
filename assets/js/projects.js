@@ -4,7 +4,9 @@ class ProjectsController {
 
         this.projectCards = [];
         this.projectDetails = null;
-
+        this.currentProject = null;
+        this.currentImageIndex = 0;
+        
         this.projects = {
 
             "ultimate-cafe-franchise": {
@@ -82,7 +84,7 @@ class ProjectsController {
 
                 title: "Zoo Guardians",
 
-                company: "Lunari Entertainment",
+                company: "JumpStart Games",
 
                 role: "Junior Unity Gameplay Programmer",
 
@@ -229,7 +231,7 @@ class ProjectsController {
 
                 title: "Wordy",
 
-                company: "Knackbout Studios",
+                company: "RealPlay Studios",
 
                 role: "Senior Unity Gameplay Programmer",
 
@@ -331,6 +333,15 @@ class ProjectsController {
 
         this.projectTags = document.getElementById("project-tags");
 
+        this.lightbox = document.getElementById("project-lightbox");
+
+        this.lightboxImage = document.getElementById("lightbox-image");
+
+        this.lightboxClose = document.getElementById("lightbox-close");
+
+        this.lightboxPrevious = document.getElementById("lightbox-previous");
+
+        this.lightboxNext = document.getElementById("lightbox-next");
     }
 
     bindEvents() {
@@ -352,7 +363,64 @@ class ProjectsController {
             });
 
         });
+        this.lightboxClose.addEventListener("click", () => {
 
+            this.closeLightbox();
+
+        });
+
+        this.lightboxNext.addEventListener("click", () => {
+
+            this.nextImage();
+
+        });
+
+        this.lightboxPrevious.addEventListener("click", () => {
+
+            this.previousImage();
+
+        });
+
+        this.lightbox.addEventListener("click", (event) => {
+
+            if (event.target === this.lightbox) {
+
+                this.closeLightbox();
+
+            }
+
+        });
+        document.addEventListener("keydown", (event) => {
+
+            if (!this.lightbox.classList.contains("active")) {
+
+                return;
+
+            }
+
+            switch (event.key) {
+
+                case "Escape":
+
+                    this.closeLightbox();
+
+                    break;
+
+                case "ArrowLeft":
+
+                    this.previousImage();
+
+                    break;
+
+                case "ArrowRight":
+
+                    this.nextImage();
+
+                    break;
+
+            }
+
+        });
     }
     
     showProject(projectId) {
@@ -362,7 +430,7 @@ class ProjectsController {
 
         if (!project)
             return;
-
+        this.currentProject = project;
         this.projectCover.src = project.images[0];
 
         this.projectCompany.textContent = project.company;
@@ -401,14 +469,24 @@ class ProjectsController {
     `;
 
         });
+        
         this.projectGallery.innerHTML = "";
-        project.images.slice(1).forEach(image => {
 
-            this.projectGallery.innerHTML += `
-        <img
-            src="${image}"
-            alt="${project.title}">
-    `;
+        project.images.slice(1).forEach((image, index) => {
+
+            const img = document.createElement("img");
+
+            img.src = image;
+
+            img.alt = `${project.title} Screenshot`;
+
+            img.addEventListener("click", () => {
+
+                this.openLightbox(index);
+
+            });
+
+            this.projectGallery.appendChild(img);
 
         });
         this.projectLinks.innerHTML = "";
@@ -449,6 +527,63 @@ class ProjectsController {
             block: "start"
 
         });
+    }
+
+    openLightbox(index) {
+
+        this.galleryImages = this.currentProject.images.slice(1);
+
+        this.currentImageIndex = index;
+
+        this.showLightboxImage(index);
+
+        this.lightbox.classList.add("active");
+        
+        document.body.style.overflow = "hidden";
+
+    }
+
+    closeLightbox() {
+
+        this.lightbox.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+    showLightboxImage(index) {
+
+        this.lightboxImage.src =
+            this.galleryImages[index];
+
+    }
+
+    nextImage() {
+
+        this.currentImageIndex++;
+
+        if (this.currentImageIndex >= this.galleryImages.length) {
+
+            this.currentImageIndex = 0;
+
+        }
+
+        this.showLightboxImage(this.currentImageIndex);
+
+    }
+
+    previousImage() {
+
+        this.currentImageIndex--;
+
+        if (this.currentImageIndex < 0) {
+
+            this.currentImageIndex = this.galleryImages.length - 1;
+
+        }
+
+        this.showLightboxImage(this.currentImageIndex);
+
     }
 
 }
