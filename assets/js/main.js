@@ -50,8 +50,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     initializeScrollSpy();
     initializeMobileNavigation();
-
+    const projectsController = new ProjectsController();
+    projectsController.initialize();
 });
+
 
 function initializeScrollSpy() {
 
