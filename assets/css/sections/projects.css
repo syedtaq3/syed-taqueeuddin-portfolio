@@ -636,3 +636,49 @@
     background: rgba(255,255,255,.25);
 
 }
+
+/* ===========================================================
+   PROJECT CARD MEDIA
+=========================================================== */
+
+.project-card-image {
+    margin: -1.75rem -1.75rem 1.5rem;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+    aspect-ratio: 16 / 9;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.035);
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-content .project-company {
+    margin-bottom: .45rem;
+}
+
+.project-metrics-section {
+    margin-top: 3rem;
+}
+
+.project-metrics-section .project-details-grid {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .project-card-image {
+        margin: -1.5rem -1.5rem 1.5rem;
+    }
+}

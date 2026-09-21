@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#07090D"/></linearGradient>
+  <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF5C5C"/><stop offset="1" stop-color="#9E2020"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#55A8FF"/><stop offset="1" stop-color="#174B96"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<text x="70" y="92" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="62" font-weight="800">TINICLASH</text>
+<text x="74" y="136" fill="#8FA0B7" font-family="Arial, sans-serif" font-size="24" letter-spacing="3">UNITY 6 • ECS • MOBILE STRATEGY MVP</text>
+<rect x="90" y="190" width="1020" height="510" rx="34" fill="#151A23" stroke="#2B3444" stroke-width="3" filter="url(#shadow)"/>
+<!-- lanes -->
+<rect x="150" y="235" width="900" height="420" rx="24" fill="#0D121A"/>
+<path d="M600 235V655 M150 445H1050" stroke="#283241" stroke-width="3" stroke-dasharray="12 16"/>
+<!-- towers -->
+<g>
+ <rect x="185" y="285" width="110" height="90" rx="18" fill="url(#red)"/>
+ <path d="M240 265L270 305H210Z" fill="#FF8C8C"/>
+ <rect x="905" y="515" width="110" height="90" rx="18" fill="url(#blue)"/>
+ <path d="M960 495L990 535H930Z" fill="#9FD1FF"/>
+</g>
+<!-- red units -->
+<g fill="url(#red)">
+ <circle cx="380" cy="350" r="27"/><circle cx="450" cy="395" r="24"/><circle cx="330" cy="430" r="22"/>
+ <circle cx="510" cy="330" r="20"/>
+</g>
+<!-- blue units -->
+<g fill="url(#blue)">
+ <circle cx="820" cy="545" r="27"/><circle cx="750" cy="500" r="24"/><circle cx="870" cy="470" r="22"/>
+ <circle cx="690" cy="570" r="20"/>
+</g>
+<!-- project callouts -->
+<g font-family="Arial, sans-serif">
+ <rect x="150" y="735" width="270" height="86" rx="18" fill="#111722" stroke="#2B3444"/>
+ <text x="180" y="770" fill="#6EB4FF" font-size="16" letter-spacing="2">ARCHITECTURE</text>
+ <text x="180" y="800" fill="#FFF" font-size="22" font-weight="700">Unity Entities / ECS</text>
+ <rect x="465" y="735" width="270" height="86" rx="18" fill="#111722" stroke="#2B3444"/>
+ <text x="495" y="770" fill="#6EB4FF" font-size="16" letter-spacing="2">GAMEPLAY</text>
+ <text x="495" y="800" fill="#FFF" font-size="22" font-weight="700">Cards • Units • Towers</text>
+ <rect x="780" y="735" width="270" height="86" rx="18" fill="#111722" stroke="#2B3444"/>
+ <text x="810" y="770" fill="#6EB4FF" font-size="16" letter-spacing="2">STATUS</text>
+ <text x="810" y="800" fill="#FFF" font-size="22" font-weight="700">MVP Development</text>
+</g>
+</svg>

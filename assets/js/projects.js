@@ -8,6 +8,206 @@ class ProjectsController {
         this.currentImageIndex = 0;
         
         this.projects = {
+            
+            "tini-clash": {
+
+                title: "TiniClash",
+
+                company: "Personal MVP",
+
+                role: "Unity Gameplay Developer",
+
+                overview:
+                    "TiniClash is a mobile real-time strategy MVP built in Unity 6 using Unity Entities (ECS). The project focuses on a card-driven deployment loop where players spend mana to deploy units, units move and acquire targets, buildings attack, and the battle loop progresses in real time. The MVP is focused on establishing strong gameplay foundations, scalable ECS architecture and reusable systems before final art, animation and VFX.",
+
+                tags: [
+                    "Unity 6",
+                    "C#",
+                    "Unity Entities",
+                    "ECS",
+                    "Strategy",
+                    "Gameplay Systems",
+                    "Mobile",
+                    "MVP"
+                ],
+
+                contributions: [
+
+                    "Designed and implemented the core Unity Entities / ECS gameplay architecture.",
+
+                    "Created the foundational UnitEntity setup for melee and ranged units.",
+
+                    "Implemented unit spawning and movement systems.",
+
+                    "Implemented target acquisition and building targeting.",
+
+                    "Developed building attack systems and projectile spawning.",
+
+                    "Implemented projectile-based combat flow.",
+
+                    "Built the card definition, deck and hand systems.",
+
+                    "Implemented the mana system used for unit deployment.",
+
+                    "Implemented drag-and-drop card deployment from the mobile UI.",
+
+                    "Built UnitDeploymentPreview and placement validation behaviour.",
+
+                    "Implemented card refill timing and card pooling.",
+
+                    "Integrated ECS gameplay data with the UI layer.",
+
+                    "Worked with Unity SubScenes and ECS authoring/baking workflows.",
+
+                    "Built the foundations for the gameplay loop and battle-state systems.",
+
+                    "Debugged and resolved ECS structural-change, singleton, buffer and component lifecycle issues during development."
+
+                ],
+
+                metrics: {
+
+                    "ROLE": "Unity Gameplay Developer",
+
+                    "PROJECT TYPE": "Personal MVP",
+
+                    "ENGINE": "Unity 6 · 6000.0.75f1",
+
+                    "ARCHITECTURE": "Unity Entities · ECS",
+
+                    "TARGET": "Mobile · Portrait",
+
+                    "STATUS": "MVP Development"
+
+                },
+
+                technologies: [
+
+                    "Unity 6",
+
+                    "C#",
+
+                    "Unity Entities",
+
+                    "ECS",
+
+                    "SubScenes",
+
+                    "Authoring & Baking",
+
+                    "Gameplay Systems",
+
+                    "Card Systems",
+
+                    "Mana System",
+
+                    "Object Pooling",
+
+                    "Mobile Development"
+
+                ],
+
+                images: [
+                    "assets/images/projects/tini-clash/tini-clash-hero.png",
+                    "assets/images/projects/tini-clash/tini-clash-card-system.png",
+                    "assets/images/projects/tini-clash/tini-clash-valid-deployment.png",
+                    "assets/images/projects/tini-clash/tini-clash-invalid-deployment.png",
+                    "assets/images/projects/tini-clash/tini-clash-combat.png",
+                    "assets/images/projects/tini-clash/tini-clash-battlefield.png",
+                    "assets/images/projects/tini-clash/tini-clash-match-complete.png"
+                ],
+
+                video: "assets/videos/projects/tini-clash/tini-clash-gameplay.mp4",
+
+                website: null
+
+            },
+            
+            "lost-tower": {
+
+                title: "The Lost Tower",
+
+                company: "AWO Gaming",
+
+                role: "Senior Unity Gameplay Developer · Sole Unity Developer",
+
+                overview:
+                    "The Lost Tower is a commercial live-service Tower Defense game developed for Android and iOS. As the sole Unity Gameplay Developer, I owned gameplay architecture, feature implementation, LiveOps systems, backend integrations, progression systems and long-term maintainability of the gameplay codebase.",
+
+                tags: [
+                    "Unity",
+                    "C#",
+                    "Tower Defense",
+                    "LiveOps",
+                    "Backend Integration",
+                    "Progression",
+                    "Mobile"
+                ],
+
+                contributions: [
+                    "Owned the gameplay architecture and Unity gameplay implementation as the sole Unity Gameplay Developer.",
+                    "Implemented core Tower Defense gameplay and wave-based combat systems.",
+                    "Built LiveOps features including Season Pass, tournaments, events and progression systems.",
+                    "Integrated and maintained backend REST APIs across gameplay and meta systems.",
+                    "Implemented player progression, upgrades, cards, currencies and related meta-progression flows.",
+                    "Built data-driven systems using LiveContent JSON to keep gameplay and meta configuration separate from code.",
+                    "Implemented authentication and platform-specific account flows, including guest and Apple Sign In integration.",
+                    "Worked on gameplay UI, FTUE, localization and player-facing systems.",
+                    "Investigated and optimized mobile performance during heavy enemy waves and gameplay spikes.",
+                    "Supported Android and iOS production workflows and release preparation."
+                ],
+
+                metrics: {
+                    "ROLE": "Sole Unity Gameplay Developer",
+                    "DURATION": "6 Months",
+                    "TEAM": "4 Members",
+                    "REST APIs": "69 Integrated",
+                    "PLATFORMS": "Android & iOS",
+                    "ENGINE": "Unity 2022 LTS"
+                },
+
+                technologies: [
+                    "Unity 2022 LTS",
+                    "C#",
+                    "REST APIs",
+                    "LiveOps",
+                    "ScriptableObjects",
+                    "Addressables",
+                    "JSON",
+                    "LiveContent",
+                    "Git",
+                    "Android",
+                    "iOS",
+                    "Performance Optimization"
+                ],
+
+                images: [
+                    "assets/images/projects/lost-tower/game-cover.png",
+                    "assets/images/projects/lost-tower/gameplay-god-of-war-impact.png",
+                    "assets/images/projects/lost-tower/god-of-time-introduction.png",
+                    "assets/images/projects/lost-tower/gameplay-late-wave.png",
+                    "assets/images/projects/lost-tower/gameplay-god-of-ice.png",
+                    "assets/images/projects/lost-tower/ui-scroll-unlock-attack-speed.png",
+                    "assets/images/projects/lost-tower/splash-screen.png",
+                    "assets/images/projects/lost-tower/gameplay-enemy-wave.png",
+                    "assets/images/projects/lost-tower/ui-store-gems-pack.png",
+                    "assets/images/projects/lost-tower/gameplay-god-of-war-activation.png",
+                    "assets/images/projects/lost-tower/god-of-war-summoned.png",
+                    "assets/images/projects/lost-tower/ui-scrolls-overview.png",
+                    "assets/images/projects/lost-tower/ui-home-screen.png",
+                    "assets/images/projects/lost-tower/god-of-ice-introduction.png",
+                    "assets/images/projects/lost-tower/ui-scroll-unlock-gold-per-wave.png",
+                    "assets/images/projects/lost-tower/ui-upgrades-tier3.png",
+                    "assets/images/projects/lost-tower/ui-store-power-pack.png",
+                    "assets/images/projects/lost-tower/ui-battle-pass.png",
+                    "assets/images/projects/lost-tower/ui-upgrades-tier4.png",
+                    "assets/images/projects/lost-tower/god-of-war-introduction.png"
+                ],
+
+                video: "assets/videos/projects/lost-tower/hero-gameplay.mp4",
+                website: null
+
+            },
 
             "ultimate-cafe-franchise": {
 
@@ -332,6 +532,8 @@ class ProjectsController {
         this.projectTechnologies = document.getElementById("project-technologies");
 
         this.projectTags = document.getElementById("project-tags");
+        this.projectMetricsSection = document.getElementById("project-metrics-section");
+        this.projectMetrics = document.getElementById("project-metrics");
 
         this.lightbox = document.getElementById("project-lightbox");
 
@@ -422,7 +624,7 @@ class ProjectsController {
 
         });
     }
-    
+
     showProject(projectId) {
 
         const project =
@@ -430,18 +632,29 @@ class ProjectsController {
 
         if (!project)
             return;
+
         this.currentProject = project;
+
         this.projectCover.src = project.images[0];
 
-        this.projectCompany.textContent = project.company;
+        this.projectCover.alt = `${project.title} Cover`;
 
-        this.projectTitle.textContent = project.title;
+        this.projectCompany.textContent =
+            project.company;
 
-        this.projectRole.textContent = project.role;
+        this.projectTitle.textContent =
+            project.title;
 
-        this.projectOverview.textContent = project.overview;
-        
-        this.projectLinks.innerHTML = "";
+        this.projectRole.textContent =
+            project.role;
+
+        this.projectOverview.textContent =
+            project.overview;
+
+
+        /* =====================================================
+           TAGS
+        ===================================================== */
 
         this.projectTags.innerHTML = "";
 
@@ -452,74 +665,176 @@ class ProjectsController {
 
         });
 
+
+        /* =====================================================
+           PROJECT METRICS
+        ===================================================== */
+
+        this.projectMetrics.innerHTML = "";
+
+        if (project.metrics) {
+
+            this.projectMetricsSection.style.display = "block";
+
+            Object.entries(project.metrics).forEach(
+                ([label, value]) => {
+
+                    const metric = document.createElement("div");
+
+                    metric.innerHTML = `
+                        <span class="detail-label">
+                            ${label}
+                        </span>
+
+                        <span class="detail-value">
+                            ${value}
+                        </span>
+                    `;
+
+                    this.projectMetrics.appendChild(metric);
+
+                }
+            );
+
+        } else {
+
+            this.projectMetricsSection.style.display = "none";
+
+        }
+
+
+        /* =====================================================
+           CONTRIBUTIONS
+        ===================================================== */
+
         this.projectContributions.innerHTML = "";
-        project.contributions.forEach(contribution => {
 
-            this.projectContributions.innerHTML += `
-        <li>${contribution}</li>
-    `;
+        project.contributions.forEach(
+            contribution => {
 
-        });
+                this.projectContributions.innerHTML += `
+                    <li>
+                        ${contribution}
+                    </li>
+                `;
+
+            }
+        );
+
+
+        /* =====================================================
+           TECHNOLOGIES
+        ===================================================== */
 
         this.projectTechnologies.innerHTML = "";
-        project.technologies.forEach(technology => {
 
-            this.projectTechnologies.innerHTML += `
-        <span class="tech-chip">${technology}</span>
-    `;
+        project.technologies.forEach(
+            technology => {
 
-        });
-        
+                this.projectTechnologies.innerHTML += `
+                    <span class="tech-chip">
+                        ${technology}
+                    </span>
+                `;
+
+            }
+        );
+
+
+        /* =====================================================
+           GALLERY
+        ===================================================== */
+
         this.projectGallery.innerHTML = "";
 
-        project.images.slice(1).forEach((image, index) => {
+        if (project.images.length > 1) {
 
-            const img = document.createElement("img");
+            project.images.slice(1).forEach(
+                (image, index) => {
 
-            img.src = image;
+                    const img =
+                        document.createElement("img");
 
-            img.alt = `${project.title} Screenshot`;
+                    img.src = image;
 
-            img.addEventListener("click", () => {
+                    img.alt =
+                        `${project.title} Screenshot ${index + 1}`;
 
-                this.openLightbox(index);
+                    img.addEventListener(
+                        "click",
+                        () => {
 
-            });
+                            this.openLightbox(index);
 
-            this.projectGallery.appendChild(img);
+                        }
+                    );
 
-        });
+                    this.projectGallery.appendChild(img);
+
+                }
+            );
+
+        } else {
+
+            const placeholder =
+                document.createElement("div");
+
+            placeholder.className =
+                "project-gallery-placeholder";
+
+            placeholder.textContent =
+                "Additional screenshots and gameplay footage will be added here.";
+
+            this.projectGallery.appendChild(
+                placeholder
+            );
+
+        }
+
+
+        /* =====================================================
+           LINKS
+        ===================================================== */
+
         this.projectLinks.innerHTML = "";
+
         if (project.video) {
 
             this.projectLinks.innerHTML += `
-            <a
-                class="project-link-button"
-                href="${project.video}"
-                target="_blank"
-                rel="noopener noreferrer">
-        
-                ▶ Watch Gameplay
-            </a>`;
+                <a
+                    class="project-link-button"
+                    href="${project.video}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ▶ Watch Gameplay
+                </a>
+            `;
 
         }
 
         if (project.website) {
 
             this.projectLinks.innerHTML += `
-            <a
-                class="project-link-button"
-                href="${project.website}"
-                target="_blank"
-                rel="noopener noreferrer">
-        
-                🌐 Visit Website
-        
-            </a>`;
+                <a
+                    class="project-link-button"
+                    href="${project.website}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🌐 Visit Website
+                </a>
+            `;
 
         }
 
+
+        /* =====================================================
+           SHOW VIEWER
+        ===================================================== */
+
         this.projectView.style.display = "block";
+
         this.projectView.scrollIntoView({
 
             behavior: "smooth",
@@ -527,6 +842,7 @@ class ProjectsController {
             block: "start"
 
         });
+
     }
 
     openLightbox(index) {

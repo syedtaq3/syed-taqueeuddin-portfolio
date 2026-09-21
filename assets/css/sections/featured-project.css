@@ -329,3 +329,19 @@
     font-weight:600;
 
 }
+
+/* ===========================================================
+   TINICLASH FEATURE MEDIA
+=========================================================== */
+
+.tini-clash-media {
+    padding: 0;
+    background: #0A0D12;
+}
+
+.featured-project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+}

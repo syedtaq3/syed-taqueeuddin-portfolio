@@ -1,0 +1,256 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+
+        <linearGradient
+                id="background"
+                x1="0"
+                y1="0"
+                x2="1"
+                y2="1"
+        >
+            <stop
+                    offset="0%"
+                    stop-color="#111722"
+            />
+
+            <stop
+                    offset="100%"
+                    stop-color="#07090D"
+            />
+        </linearGradient>
+
+        <linearGradient
+                id="accent"
+                x1="0"
+                y1="0"
+                x2="1"
+                y2="1"
+        >
+            <stop
+                    offset="0%"
+                    stop-color="#5EA8FF"
+            />
+
+            <stop
+                    offset="100%"
+                    stop-color="#2B6DFF"
+            />
+        </linearGradient>
+
+    </defs>
+
+
+    <!-- Background -->
+
+    <rect
+            width="1600"
+            height="1000"
+            fill="url(#background)"
+    />
+
+
+    <!-- Arena -->
+
+    <rect
+            x="260"
+            y="170"
+            width="1080"
+            height="660"
+            rx="40"
+            fill="#0D121B"
+            stroke="#263244"
+            stroke-width="3"
+    />
+
+
+    <!-- Arena center -->
+
+    <line
+            x1="800"
+            y1="190"
+            x2="800"
+            y2="810"
+            stroke="#263244"
+            stroke-width="3"
+            stroke-dasharray="12 18"
+    />
+
+
+    <!-- Blue tower -->
+
+    <rect
+            x="350"
+            y="390"
+            width="140"
+            height="220"
+            rx="18"
+            fill="#172A47"
+            stroke="#5EA8FF"
+            stroke-width="5"
+    />
+
+    <circle
+            cx="420"
+            cy="340"
+            r="45"
+            fill="#5EA8FF"
+            opacity=".9"
+    />
+
+
+    <!-- Red tower -->
+
+    <rect
+            x="1110"
+            y="390"
+            width="140"
+            height="220"
+            rx="18"
+            fill="#3A1C25"
+            stroke="#FF6B7A"
+            stroke-width="5"
+    />
+
+    <circle
+            cx="1180"
+            cy="340"
+            r="45"
+            fill="#FF6B7A"
+            opacity=".9"
+    />
+
+
+    <!-- Units -->
+
+    <circle
+            cx="590"
+            cy="470"
+            r="34"
+            fill="#5EA8FF"
+    />
+
+    <circle
+            cx="680"
+            cy="560"
+            r="34"
+            fill="#5EA8FF"
+    />
+
+    <circle
+            cx="1010"
+            cy="470"
+            r="34"
+            fill="#FF6B7A"
+    />
+
+    <circle
+            cx="920"
+            cy="560"
+            r="34"
+            fill="#FF6B7A"
+    />
+
+
+    <!-- Projectile -->
+
+    <circle
+            cx="850"
+            cy="515"
+            r="10"
+            fill="#FFFFFF"
+    />
+
+
+    <!-- Card hand -->
+
+    <rect
+            x="520"
+            y="710"
+            width="150"
+            height="180"
+            rx="18"
+            fill="#151D2A"
+            stroke="#33445F"
+            stroke-width="3"
+    />
+
+    <rect
+            x="725"
+            y="710"
+            width="150"
+            height="180"
+            rx="18"
+            fill="#151D2A"
+            stroke="#5EA8FF"
+            stroke-width="3"
+    />
+
+    <rect
+            x="930"
+            y="710"
+            width="150"
+            height="180"
+            rx="18"
+            fill="#151D2A"
+            stroke="#33445F"
+            stroke-width="3"
+    />
+
+
+    <!-- Card symbols -->
+
+    <circle
+            cx="595"
+            cy="780"
+            r="35"
+            fill="#5EA8FF"
+            opacity=".8"
+    />
+
+    <path
+            d="M800 750 L830 810 L770 810 Z"
+            fill="#5EA8FF"
+    />
+
+    <rect
+            x="970"
+            y="750"
+            width="70"
+            height="70"
+            rx="12"
+            fill="#FF6B7A"
+            opacity=".8"
+    />
+
+
+    <!-- Title -->
+
+    <text
+            x="800"
+            y="100"
+            text-anchor="middle"
+            fill="#F5F7FA"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="64"
+            font-weight="700"
+            letter-spacing="3"
+    >
+        TiniClash
+    </text>
+
+
+    <text
+            x="800"
+            y="955"
+            text-anchor="middle"
+            fill="#8E9AAF"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="26"
+            letter-spacing="5"
+    >
+        UNITY 6 · ECS · MOBILE STRATEGY MVP
+    </text>
+
+</svg>
